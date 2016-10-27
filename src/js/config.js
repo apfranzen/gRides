@@ -11,12 +11,19 @@
 
   function appConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
+      .state('/', {
+        url: '/',
+        templateUrl: 'js/components/main/main.view.html',
+        controller: 'mainController',
+        controllerAs: 'mainCtrl'
+      })
       .state('members', {
         url: '/members',
         templateUrl: 'js/components/members/members.view.html',
         controller: 'membersController',
         controllerAs: 'membersCtrl'
       })
+      $urlRouterProvider.otherwise('/')
   }
 
 })();

@@ -1,7 +1,25 @@
-<h1>Members View</h1>
-<ul>
-  <li ng-repeat="member in membersCtrl.members">{{member.username}}</li>
-  <!-- <li>Test</li> -->
-</ul>
+<div class="col-md-5 member_side">
+  <div class="search">
+    <button ui-sref='members' type="button" class="btn btn-primary">All</button>
+    <button ng-click='membersCtrl.numLikes()' type="button" class="btn btn-primary">Popular</button>
+    <button ui-sref='members' type="button" class="btn btn-primary">Near Me</button>
+    <button ui-sref='members' type="button" class="btn btn-primary">My Matches</button>
+    <button ui-sref='members' type="button" class="btn btn-primary">Chatting</button
+  </div>
+  <p>{{membersCtrl.orderVal}}</p>
+  <div class="row person_div" ng-repeat="member in membersCtrl.members | orderBy:membersCtrl.orderVal">
 
-<a ng-click="membersCtrl.click()">Get Members</a>
+    <div class="col-md-4">
+        <img ng-src="{{member.avatar}}">
+    </div>
+
+    <div class="person_dtl col-md-8">
+      <h4>{{member.username}}</h4>
+      <ul>
+        <li>{{member.email}}</li>
+        <li class="description">{{member.description}}</li>
+        <li>{{member._matches.length}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

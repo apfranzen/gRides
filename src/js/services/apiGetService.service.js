@@ -9,9 +9,8 @@
 
     function apiGetService($http) {
       this.getMembers = () => {
-        return $http.get('http://galvanize-student-apis.herokuapp.com/gdating/members')
+        return $http.get('https://galvanize-student-apis.herokuapp.com/gdating/members?limit=15&offset=20')
         .then(function(response) {
-          // console.log(response.data.data);
           return (response.data.data);
         });
       }

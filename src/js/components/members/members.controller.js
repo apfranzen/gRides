@@ -10,17 +10,20 @@
 
   function membersController(apiGetService) {
     /*jshint validthis: true */
-    this.greeting = 'Hello World!';
+    this.orderVal = '-likes'
 
-    this.click = function() {
+    this.numLikes = function() {
+      this.orderVal = '-_matches.length';
+    }
+
+    this.getMembers = function() {
       apiGetService.getMembers()
       .then(res => {
         this.members = res;
-        // console.log(this.members[0].username);
         console.log(res);
       })
-
     }
+    this.getMembers();
   }
 
 })();
