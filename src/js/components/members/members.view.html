@@ -1,25 +1,35 @@
-<div class="col-md-5 member_side">
-  <div class="search">
-    <button ui-sref='members' type="button" class="btn btn-primary">All</button>
-    <button ng-click='membersCtrl.numLikes()' type="button" class="btn btn-primary">Popular</button>
-    <button ui-sref='members' type="button" class="btn btn-primary">Near Me</button>
-    <button ui-sref='members' type="button" class="btn btn-primary">My Matches</button>
-    <button ui-sref='members' type="button" class="btn btn-primary">Chatting</button
-  </div>
-  <p>{{membersCtrl.orderVal}}</p>
-  <div class="row person_div" ng-repeat="member in membersCtrl.members | orderBy:membersCtrl.orderVal">
+<div class="container">
 
-    <div class="col-md-4">
-        <img ng-src="{{member.avatar}}">
+    <div class="col-md-5 member_side">
+      <div class="search">
+        <button ui-sref='members' type="button" class="btn btn-primary">All</button>
+        <button ng-click='membersCtrl.numLikes()' type="button" class="btn btn-primary">Popular</button>
+        <button ui-sref='members' type="button" class="btn btn-primary">Near Me</button>
+        <button ng-click='membersCtrl.myMatches()' ui-sref='members' type="button" class="btn btn-primary">My Matches</button>
+        <button ui-sref='members' type="button" class="btn btn-primary">Chatting</button>
+      </div>
+      <p>{{membersCtrl.orderVal}}</p>
+      <p>{{membersCtrl.filterVal}}</p>
+      <!-- <div class="row person_div" ng-repeat="member in membersCtrl.members | limitTo: 15 | orderBy:membersCtrl.orderVal | filter:membersCtrl.filterVal"> -->
+      <div class="row person_div" ng-repeat="member in membersCtrl.members | limitTo: 15 | orderBy:membersCtrl.orderVal">
+
+        <div class="col-md-4">
+            <img ng-src="{{member.avatar}}">
+        </div>
+
+        <div class="person_dtl col-md-8">
+          <a ui-sref="members.individualMember" ng-click="">Show Contact!</a>
+          <h4>{{member.username}}</h4>
+          <ul>
+            <li>{{member.email}}</li>
+            <li class="description">{{member.description}}</li>
+            <li>{{member._matches.length}}</li>
+          </ul>
+        </div>
+
     </div>
 
-    <div class="person_dtl col-md-8">
-      <h4>{{member.username}}</h4>
-      <ul>
-        <li>{{member.email}}</li>
-        <li class="description">{{member.description}}</li>
-        <li>{{member._matches.length}}</li>
-      </ul>
-    </div>
+
   </div>
+  <ui-view></ui-view>
 </div>

@@ -23,7 +23,11 @@
         controller: 'membersController',
         controllerAs: 'membersCtrl'
       })
+      .state('members.individualMember', {
+        templateUrl: 'js/components/members/partials/_individualMember.html'
+      })
       $urlRouterProvider.otherwise('/')
+
   }
 
 })();
