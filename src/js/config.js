@@ -44,7 +44,7 @@
         access: true
       })
       .state('members.individualMember.conversations', {
-        templateUrl: 'js/components/members/partials/_conversataions.html',
+        templateUrl: 'js/components/members/partials/_conversations.html',
         controller: 'conversationsController',
         controllerAs: 'convosCtrl',
         access: false
