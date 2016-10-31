@@ -6,9 +6,9 @@
     .module('myApp.components.members', [])
     .controller('membersController', membersController)
 
-  membersController.$inject = ['membersService'];
+  membersController.$inject = ['membersService', '$state'];
 
-  function membersController(membersService) {
+  function membersController(membersService, $state) {
     /*jshint validthis: true */
     // this.members = [];
     this.orderVal = 'username';
@@ -45,6 +45,8 @@
         }
       }
       this.member = this.match[0];
+      console.log(this);
+      $state.go('members.individualMember.conversations')
     }
 
     // this.suffix = '?limit=20&offset=20'

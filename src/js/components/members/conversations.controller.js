@@ -19,6 +19,12 @@
       console.log(res);
       this.convos = res;
     });
+
+    this.sendMessage = function(recipientId) {
+      console.log(recipientId);
+      var test = localStorage.getItem('_id');
+      console.log(test);
+    }
   }
 
 })();

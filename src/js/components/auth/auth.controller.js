@@ -18,7 +18,9 @@
 
       authService.login(user)
       .then((res) => {
+        console.log(res);
         localStorage.setItem('token', res.data.data.token);
+        localStorage.setItem('_id', res.data.data.user._id);
         event.preventDefault();
         $state.go('members');
       })
@@ -31,8 +33,6 @@
         localStorage.setItem('token', res.data.data.token);
       })
     }
-
-
   }
 
 })();
