@@ -4,7 +4,7 @@
 
   angular
     .module('myApp.components.members', [])
-    .controller('membersController', membersController);
+    .controller('membersController', membersController)
 
   membersController.$inject = ['membersService'];
 
@@ -16,10 +16,12 @@
 
     this.numLikes = function() {
       this.orderVal = '-_matches.length';
+      this.filterVal = '';
     }
 
     this.myMatches = function() {
       this.filterVal = '5719234249f05f11000fdd62';
+      this.orderVal = '';
       console.log(this.members);
       this.matches = [];
 
@@ -33,25 +35,23 @@
       this.members = this.matches;
     }
 
-    this.individualmember = function(_id) {
-      this.filterVal = '5719234249f05f11000fdd62';
+    this.individualMember = function(_id) {
       console.log(this.members);
-      this.matches = [];
+      this.match = [];
 
       for (var i = 0; i < this.members.length; i++) {
-        for (var j = 0; j < this.members[i]._matches.length; j++) {
-          if (this.members[i]._matches[j] === this.filterVal) {
-            this.matches.push(this.members[i])
-          }
+        if (this.members[i]._id === _id) {
+          this.match.push(this.members[i])
         }
       }
-      this.members = this.matches;
+      this.member = this.match[0];
     }
 
     // this.suffix = '?limit=20&offset=20'
     membersService.getMembers()
     .then((res) => {
       this.members = res;
+      console.log('membersService fired from getMembers');
     });
   }
 

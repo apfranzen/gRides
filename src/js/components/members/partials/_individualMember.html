@@ -1,1 +1,19 @@
-<h1>individual member</h1>
+<div class="col-md-7 individuvalMember">
+  <div class="col-md-4">
+      <img ng-src="{{membersCtrl.member.avatar}}">
+  </div>
+  <div class="person_dtl col-md-8">
+    <h4>{{membersCtrl.member.username}}</h4>
+    <ul>
+      <li>{{membersCtrl.member.email}}</li>
+      <li class="description">{{membersCtrl.member.description}}</li>
+      <li>{{membersCtrl.member._matches.length}}</li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    {{membersCtrl.member._matches.length}}
+  </div>
+
+  <ui-view><a ui-sref="members.individualMember.conversations">Show Convcersations</a></ui-view>
+</div>

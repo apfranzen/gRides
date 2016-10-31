@@ -1,0 +1,23 @@
+
+
+<h1>Convos View</h1>
+  <div class="">
+    <!-- <div ng-controller="simpleController">
+    <input  class="txt" type="text" ng-model="nameText" />
+    <div>
+     <ul>
+      <li ng-repeat="myKeys in tags| filter:nameText">{{myKeys}}</li>
+     </ul>
+    <div ng-show="!tags.length">No Tag Found</div>
+    </div>
+    </div> -->
+    <!-- <div ng-show="!(tags| filter:nameText).length">No Tag Found</div> -->
+    <div ng-show="!convosCtrl.convos.length">
+      <h4>No convserations. Send first Message!</h4>
+      <h4>{{membersCtrl.member.description}}</h4>
+    </div>
+
+    <div ng-show="convosCtrl.convos.length">
+      <h4 ng-repeat="convo in convos.Ctrl.convos">{{convo}}</h4>
+    </div>
+  </div>

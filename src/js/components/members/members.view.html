@@ -18,7 +18,7 @@
         </div>
 
         <div class="person_dtl col-md-8">
-          <a ui-sref="members.individualMember" ng-click="">Show Contact!</a>
+          <a ng-click="membersCtrl.individualMember(member._id)" ui-sref="members.individualMember" ng-click="">Show Contact!</a>
           <h4>{{member.username}}</h4>
           <ul>
             <li>{{member.email}}</li>
@@ -27,7 +27,7 @@
           </ul>
         </div>
 
-    </div>
+      </div>
 
 
   </div>

@@ -6,9 +6,12 @@
 
   angular
     .module('myApp', [
+      'ngRoute',
       'myApp.config',
       'myApp.components.main',
-      'myApp.components.members'
+      'myApp.components.members',
+      'myApp.components.auth',
+      'myApp.components.conversations'
     ]);
 
 })();

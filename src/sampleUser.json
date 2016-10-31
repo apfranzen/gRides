@@ -1,0 +1,34 @@
+{
+  "username": "slimshady",
+  "names": {
+    "firstName": "Slim",
+    "lastName": "Shady"
+  },
+  "description": "Likes to drive a car",
+  "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/vikasvinfotech/128.jpg",
+  "email": "test123@123.com",
+  "password": "password",
+  "dob": "1988-10-29",
+  "phone": "333-333-3333",
+  "address": {
+    "zipcode": "80123",
+    "geo": {
+      "lng": 123,
+      "lat": 123
+    },
+    "suite": "",
+    "city": "Denver",
+    "street": "123 Main"
+  },
+  "website": "yolo.com",
+  "company": {
+    "bs": "",
+    "catchPhrase": "",
+    "name": ""
+  },
+  "slug": "slug",
+  "gender": 1,
+  "interestedIn": [
+    2
+  ]
+}

@@ -50,6 +50,14 @@
   /*width: 100%;*/
 }
 
+.individuvalMember {
+  border: 1px solid grey;
+}
+
+.register-form {
+    padding-bottom: 90px;
+}
+
 /*// Mixin
 .text-overflow() {
   overflow: hidden;

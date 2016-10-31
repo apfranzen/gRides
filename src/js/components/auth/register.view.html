@@ -1,0 +1,152 @@
+<!-- <div class="container" ng-model="login">
+  <form ng-submit="authCtrl.login(login)" name="form" novalidate>
+    <div class="form-group">
+      <label for="username">Username: </label>
+      <input type="username" class="form-control" id="username" placeholder="Username" ng-model="login.username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input type="password" class="form-control" id="password" placeholder="Password" ng-model="login.password">
+    </div>
+    <input type="submit" value="submit">
+  </form>
+</div> -->
+
+
+<div class="container register-form" ng-model="register">
+  <form ng-submit="authCtrl.register(register)" name="form" novalidate>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="input-field col s5">
+        <input id="username" type="text" ng-model="register.username">
+        <label for="username">Username</label>
+      </div>
+      <div class="input-field col s1">
+      </div>
+      <div class="input-field col s5">
+        <input id="password" type="password" ng-model="register.password">
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="first_name" type="text" ng-model="register.first_name">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="last_name" type="text" ng-model="register.last_name">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="dob" type="text" ng-model="register.birthdate">
+          <label for="dob">Birthdate</label>
+        </div>
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="email" type="email" ng-model="register.email">
+          <label for="email">Email</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s1">
+          <input id="gender" type="text" ng-model="register.gender">
+          <label for="gender">Gender</label>
+        </div>
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s9">
+          <input id="description" type="text" ng-model="register.description">
+          <label for="description">Description</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+
+        <div class="input-field col s4">
+          <input id="Street" type="text" ng-model="register.street">
+          <label for="Street">Street</label>
+        </div>
+        <div class="input-field col s1">
+          <input id="Suite" type="text" ng-model="register.suite">
+          <label for="Suite">Suite</label>
+        </div>
+
+        <div class="input-field col s1">
+        </div>
+
+        <div class="input-field col s4">
+          <input id="City" type="text" ng-model="register.city">
+          <label for="City">City</label>
+        </div>
+        <div class="input-field col s1">
+          <input id="Zip" type="number" ng-model="register.zip">
+          <label for="Zip">Zip</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="Phone" type="number" ng-model="register.phone">
+          <label for="Phone">Phone</label>
+        </div>
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s5">
+          <input id="Website" type="text" ng-model="register.website">
+          <label for="Website">Website</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s11">
+          <input id="url" type="text" ng-model="register.photo_url">
+          <label for="url">Photo URL</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-field col s12">
+      <div class="row">
+        <div class="input-field col s1">
+        </div>
+        <div class="input-field col s11">
+          <input type="submit" value="submit">
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
