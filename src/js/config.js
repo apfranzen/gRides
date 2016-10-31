@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('myApp.config', ['ui.router'])
+    .module('myApp.config', [])
     .config(appConfig)
     // .run(routeStart)
     .run(stateStart)
@@ -44,7 +44,7 @@
         access: true
       })
       .state('members.individualMember.conversations', {
-        templateUrl: 'js/components/members/partials/_conversations.html',
+        templateUrl: 'js/components/members/partials/_conversataions.html',
         controller: 'conversationsController',
         controllerAs: 'convosCtrl',
         access: false
@@ -62,17 +62,24 @@
     console.log('routeStart hit');
     console.log('location: ', location.hash);
     $rootScope.$on('$stateChangeStart', (event, toState, fromState) => {
-      console.log('toState: ', toState);
-      console.log('fromState: ', fromState);
-      console.log(localStorage)
-      if (localStorage.getItem('token') && location.hash === "/login") {
-        // event.preventDefault()
-        console.log('yolo');
-        $state.go('members');
-      } else if (!toState.access && !localStorage.getItem('token')) {
-        event.preventDefault();
-        $state.go('login');
+      console.log(toState.access);
+      if (!toState.access) {
+        if (!localStorage.getItem('token')) {
+          event.preventDefault();
+          $state.go('login');
+        }
       }
+      // console.log('toState: ', toState);
+      // console.log('fromState: ', fromState);
+      // console.log(localStorage)
+      // if (localStorage.getItem('token') && location.hash === "/login") {
+      //   // event.preventDefault()
+      //   console.log('yolo');
+      //   $state.go('members');
+      // } else if (!toState.access && !localStorage.getItem('token')) {
+      //   event.preventDefault();
+      //   $state.go('login');
+      // }
     })
   }
 

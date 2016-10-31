@@ -6,9 +6,9 @@
     .module('myApp.components.auth', [])
     .controller('authController', authController);
 
-  authController.$inject = ['authService'];
+  authController.$inject = ['authService', '$state'];
 
-  function authController(authService) {
+  function authController(authService, $state) {
     /*jshint validthis: true */
     // this.members = [];
     this.authtest = 'auth test';
@@ -18,10 +18,9 @@
 
       authService.login(user)
       .then((res) => {
-        console.log(res);
         localStorage.setItem('token', res.data.data.token);
-        // event.preventDefault();
-        // $state.go('members');
+        event.preventDefault();
+        $state.go('members');
       })
     }
 

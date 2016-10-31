@@ -6,6 +6,7 @@
 
   angular
     .module('myApp', [
+      'ui.router',
       'ngRoute',
       'myApp.config',
       'myApp.components.main',
