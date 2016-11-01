@@ -24,6 +24,7 @@
       console.log(recipientId);
       var test = localStorage.getItem('_id');
       console.log(test);
+      
     }
   }
 

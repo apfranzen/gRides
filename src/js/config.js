@@ -25,10 +25,10 @@
         controllerAs: 'membersCtrl',
         access: false
       })
-      .state('members.individualMember', {
-        templateUrl: 'js/components/members/partials/_individualMember.html',
-        access: false
-      })
+      // .state('members.individualMember', {
+      //   templateUrl: 'js/components/members/partials/_individualMember.html',
+      //   access: false
+      // })
       .state('login', {
         url: '/login',
         templateUrl: 'js/components/auth/login.view.html',
@@ -43,7 +43,7 @@
         controllerAs: 'authCtrl',
         access: true
       })
-      .state('members.individualMember.conversations', {
+      .state('members.conversations', {
         templateUrl: 'js/components/members/partials/_conversations.html',
         controller: 'conversationsController',
         controllerAs: 'convosCtrl',

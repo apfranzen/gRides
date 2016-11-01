@@ -11,6 +11,7 @@
   function membersController(membersService, $state) {
     /*jshint validthis: true */
     // this.members = [];
+    this.show_individual = true;
     this.orderVal = 'username';
     this.filterVal = '';
 
@@ -38,6 +39,7 @@
     this.individualMember = function(_id) {
       console.log(this.members);
       this.match = [];
+      this.show_individual = true;
 
       for (var i = 0; i < this.members.length; i++) {
         if (this.members[i]._id === _id) {
@@ -45,8 +47,9 @@
         }
       }
       this.member = this.match[0];
-      console.log(this);
-      // $state.go('members.individualMember.conversations')
+      this.show_individual = false;
+      $state.go('members.conversations')
+      console.log('members.conversations');
     }
 
     // this.suffix = '?limit=20&offset=20'
