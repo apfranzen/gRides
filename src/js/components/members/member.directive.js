@@ -8,15 +8,10 @@
   function memberView() {
     return {
       scope: {
-        mem: '='
+        mem: '<'
       },
       restrict: 'E',
-      templateUrl: 'js/components/members/partials/_individualMember.html',
-      link: (scope, el, attrs) => {
-        scope.$watch('mem', function(newValue, oldValue) {
-          scope.mem = newValue;
-        })
-      }
+      templateUrl: 'js/components/members/partials/_individualMember.html'
     };
   }
 
