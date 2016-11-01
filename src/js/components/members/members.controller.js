@@ -46,7 +46,7 @@
       }
       this.member = this.match[0];
       console.log(this);
-      $state.go('members.individualMember.conversations')
+      // $state.go('members.individualMember.conversations')
     }
 
     // this.suffix = '?limit=20&offset=20'
